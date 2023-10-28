@@ -18,11 +18,10 @@ public class FizzBuzz {
     }
 
     public static void showFizzBuzzStream(int n) {
-        IntStream.rangeClosed(1, n)
-                .mapToObj(
-                        i -> i % 5 == 0 ?
-                                (i % 7 == 0 ? "FizzBuzz" : "Fizz") :
-                                (i % 7 == 0 ? "Buzz" : i))
+        IntStream.rangeClosed(0, 100).mapToObj(
+                        i -> i % 3 == 0 ?
+                                (i % 5 == 0 ? "FizzBuzz" : "Fizz") :
+                                (i % 5 == 0 ? "Buzz" : i))
                 .forEach(System.out::println);
     }
 }
